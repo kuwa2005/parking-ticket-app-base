@@ -1,0 +1,17 @@
+{
+  "name": "parking-ticket-app",
+  "install": "sudo apt-get update && sudo apt-get install -y php-cli php-sqlite3 curl && php scripts/seed_demo.php",
+  "terminals": [
+    {
+      "name": "php-dev-server",
+      "command": "php -S 0.0.0.0:4500 -t .",
+      "description": "PHP built-in dev server for the parking-ticket app on http://localhost:4500 (serves data/parking.db seeded with demo data). Live-reflects edits to PHP files."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 4500
+    }
+  ]
+}
